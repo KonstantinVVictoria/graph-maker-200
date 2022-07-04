@@ -16,8 +16,23 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <canvas id="map"></canvas>
+        <div style={{ height: "870px", width: "1403px", position: "relative" }}>
+          <canvas id="map" style={{ position: "relative" }}></canvas>
+          <h1
+            id="path"
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "10px",
+              color: "white",
+            }}
+          >
+            awdaw
+          </h1>
+        </div>
         <button id="copy">Click to copy initialization list!</button>
+        <p>Draw Speed</p>
+        <input id="drawSpeed" type="range" min="0" max="100"></input>
       </main>
 
       <footer className={styles.footer}>
@@ -26,10 +41,9 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          Created by: Konstantin Victoria<br></br>You can decrease the draw time
+          by adjusting the slider. You do not need to wait for it to finish
+          drawing in order to copy the initializion list.
         </a>
       </footer>
     </div>
